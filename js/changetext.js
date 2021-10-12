@@ -1,6 +1,6 @@
 
 
-var text = ["👨‍💻 Cyber Security Enthusiast", "🧑‍🎓 CS Student", "🤍 CTF Player", "🐧 I Use Linux Btw!"];
+var text = ["👨‍💻 Cyber Security Enthusiast", "🧑‍🎓 Student", "🤍 CTF Player", "🐧 I Use Linux Btw!"];
 var counter = 0;
 var elem = document.getElementById("changeText");
 var inst = setInterval(change, 1300);
