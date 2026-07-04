@@ -1,0 +1,69 @@
+/* index.html — homepage hero panel */
+
+#main.panel {
+    padding-top: 80px; /* clears the floating navbar */
+}
+
+.panel {
+    text-align: center;
+    background: transparent;
+    pointer-events: none;
+    z-index: 99;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(var(--navbar-height) + 40px);
+    padding-bottom: 40px;
+    box-sizing: border-box;
+}
+
+.hero-name {
+    font-size: 50px;
+    padding-top: 10px;
+    margin: 0 0 5px;
+    line-height: 1.05;
+}
+
+.hero-tagline {
+    font-family: 'Courier New', monospace;
+    font-style: italic;
+    font-weight: bold;
+    padding-bottom: 5px;
+    font-size: 20px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .panel {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        margin: calc(var(--navbar-height) + 32px) auto 32px;
+        width: calc(100% - 32px);
+    }
+
+    .profile {
+        width: 150px;
+        height: 150px;
+    }
+
+    .hero-name {
+        font-size: clamp(2.2rem, 11vw, 3.2rem);
+        letter-spacing: 0.02em;
+    }
+
+    .hero-tagline {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+
+    .social-links {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+}
