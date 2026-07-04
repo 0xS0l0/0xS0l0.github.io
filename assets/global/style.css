@@ -18,48 +18,78 @@ body {
 }
 
 .navbar {
-    background-color: rgba(255, 255, 255, 0); /* 70% transparent black */
+    background: transparent;
     border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.navbar:hover {
+    background: transparent;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .navbar .nav-link {
-    color: #ffffff;/* Light color for better visibility on dark background */
+    color: #ffffff;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: linear-gradient(90deg, #64b5f6, #81d4fa);
+    transition: width 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    color: #818181; /* Slightly lighter color on hover */
+    color: #64b5f6;
     text-decoration: none;
+}
+
+.navbar .nav-link:hover::after {
+    width: 100%;
+}
+
+.navbar .nav-link.active::after {
+    width: 100%;
 }
 
 .navbar-brand {
-    font-family: cursive; /* Change to your desired font family */
-    font-size: 1.5rem; /* Adjust font size as needed */
-    font-weight: bold; /* Or normal, light, etc. */
-    font-style: normal; /* Or normal, oblique, etc. */
-    color: #ffffff; /* Font color */
+    font-family: cursive;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-style: normal;
+    color: #ffffff;
     border: none;
+    transition: all 0.3s ease;
+    letter-spacing: 1px;
 }
 
 .navbar-brand:hover {
-    color: #818181; /* Color on hover */
+    color: #64b5f6;
     text-decoration: none;
+    text-shadow: 0 0 10px rgba(100, 181, 246, 0.3);
 }
 
 /* Customize the navbar-toggler button */
 .navbar-toggler {
-    background-color: #ffffff00; /* Change to your desired button color */
-    border: none; /* Remove border if you want */
+    background-color: #ffffff00;
+    border: none;
 }
 
 /* Customize the color of the toggler icon */
 .navbar-toggler-icon {
-    background-image: url('/assets/global/images/menubar.png');  /* Replace with a custom icon if needed */
+    background-image: url('/assets/global/images/menubar.png');
 }
 
 .navbar-toggler:hover,
 .navbar-toggler:focus {
-    background-color:#81818180; /* Color on hover */
-     /* Change to a different color on hover/focus */
+    background-color: #81818180;
 }
 
 
